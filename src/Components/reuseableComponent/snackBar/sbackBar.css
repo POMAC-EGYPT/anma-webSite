@@ -1,0 +1,30 @@
+.snackBar-cont .MuiAlert-message {
+    font-size: 14px !important;
+    color: white !important;
+  }
+  
+  .snackBar-cont .MuiAlert-standardSuccess .MuiAlert-icon {
+    color: #00A099 !important ;
+  }
+  
+  .snackBar-cont .MuiSvgIcon-fontSizeSmall {
+    color: #00A099 !important ;
+  }
+  
+  .snackBar-cont .MuiAlert-standardSuccess {
+    background-color: #00A099 !important ;
+  }
+  
+  .snackBar-cont .MuiAlert-root {
+    border: solid;
+    border-color: white !important;
+  }
+
+  .snackBar-cont .MuiSvgIcon-root{
+    color: white !important
+  }
+
+  .snackBar-cont .MuiPaper-root{
+    border: 1px solid white;
+  }
+  

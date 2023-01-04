@@ -1,0 +1,69 @@
+.contactUs-parent .contactInformation-parent {
+    background-color: #353B50 !important;
+    height: 87vh;
+    border-radius: 5px;
+}
+
+.contactUs-parent .contactInformation-parent .information-header {
+    color: #ffff;
+    font-size: 30px;
+    text-align: start;
+    font-family: 'GopherBold';
+    /* white-space: nowrap; */
+    padding-bottom: 20px;
+}
+
+.contactUs-parent .contactInformation-parent .information-text {
+    color: #B5B5B5;
+    font-size: 16px;
+    font-family: 'GopherMedium';
+    text-align: start;
+}
+
+.contactUs-parent .contactInformation-parent .information-cont {
+    margin-top: 30px !important;
+    color: #ffff;
+    font-family: 'GopherMedium';
+    font-size: 16px;
+}
+
+.contactUs-parent .contactUs-btt {
+    background-color: #00A099 !important;
+    text-transform: lowercase;
+}
+
+.contactUs-parent .circles-parent .circles-cont {
+    height: 100%;
+    width: 100%;
+}
+
+.contactUs-parent .circles-parent .circles-cont .fullCircle {
+    left: 20px;
+    top: 167px ;
+    position: relative;
+    background-color: #5D6A95CC;
+    opacity: 100%;
+    width: 50%;
+    height: 31%;
+    border-radius: 50%;
+
+}
+
+
+.contactUs-parent .circles-parent .circles-cont .halfCircle {
+    opacity: 60%;
+    border-top-left-radius: 600px 600px;
+    background-color: #00A099;
+    height: 69%;
+    padding-left: 0px !important;
+}
+
+.contactUs-parent .contactForm-parent .myform .text-danger{
+    display: flex;
+    margin-left: auto;
+}
+
+.contactUs-parent .MuiOutlinedInput-input{
+    text-align: start;
+}
+

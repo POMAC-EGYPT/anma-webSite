@@ -1,0 +1,577 @@
+.home-parent .headerBold {
+  position: relative;
+  font-family: 'GopherBold';
+  font-size: 50px;
+  text-align: start;
+  width: 90%;
+  padding-left: 0px;
+  z-index: 1;
+
+}
+
+.home-parent .headerCont {
+  height: 90%;
+}
+
+.home-parent .headerButton {
+  width: 151px;
+}
+
+.home-parent .headerLight {
+  width: 90%;
+  font-family: 'GopherLight';
+  font-size: 19px;
+  text-align: start;
+  color: #BEBEBE;
+  /* margin-top: 36px; */
+  padding-left: 0px;
+}
+
+.home-parent .headerButton,
+.home-parent .headerButton:hover,
+.home-parent .headerButton:focus {
+  background-color: #00A099;
+  color: #FFFFFF;
+  font-size: 15px;
+  margin-top: 36px;
+  text-transform: unset;
+  height: 40px;
+}
+
+.home-parent .headerButton svg {
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+
+.home-parent #card-container {
+  height: 60%;
+  /* width: 266px; */
+  width: 15%;
+  display: inline-block;
+  position: relative;
+
+}
+
+.home-parent .card1:hover {
+  background-color: #717895 !important;
+}
+
+.home-parent .card2:hover {
+  background-color: #7EAAA8 !important;
+}
+
+.home-parent .card3:hover {
+  background-color: #BB7F84 !important;
+}
+
+.home-parent .card4:hover {
+  background-color: #81A176 !important;
+}
+
+.home-parent .card5:hover {
+  background-color: #7392A5 !important;
+}
+
+.home-parent .card6:hover {
+  background-color: #6E9E79 !important;
+}
+
+
+
+.home-parent .cont {
+  height: 177px;
+  /* 4:3 aspect ratio */
+}
+
+.home-parent .card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: silver
+    /* show me! */
+}
+
+.home-parent .card .card-text {
+  overflow: hidden;
+  font-size: 16px;
+  font-family: 'GopherMedium';
+  color: #000000;
+}
+
+
+.home-parent #card-container:hover .card-text {
+  color: #FFFFFF !important;
+}
+
+
+
+
+.home-parent .card .cardCircle {
+  background-color: #FFFFFF;
+}
+
+.home-parent .card img {
+  margin-top: 15px;
+  width: 25%;
+  margin-bottom: 15px;
+}
+
+.home-parent .custText::after {
+  content: ' ';
+  background: #00A099;
+  position: absolute;
+  right: 0px;
+  bottom: 13px;
+  height: 9px;
+  width: 74%;
+  z-index: -1;
+}
+
+.home-parent .headerParent {
+  position: relative;
+  margin-top: 5rem !important;
+}
+
+.home-parent .headerParent-about {
+  margin-top: 0px !important;
+  position: relative;
+  text-align: start !important;
+}
+
+
+.home-parent .aboutBold {
+  text-align: start;
+  width: 80%;
+  font-size: 25px;
+  font-family: 'GopherMedium';
+}
+
+.home-parent .aboutLight {
+  width: 80%;
+  font-family: 'GopherLight';
+  color: #BEBEBE;
+  font-size: 20px;
+  text-align: start;
+}
+
+.home-parent .aboutImg {
+  margin-top: auto !important;
+  margin-left: 0px !important;
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+}
+
+.home-parent .aboutCustText::after {
+  content: ' ';
+  background: #00A099;
+  position: absolute;
+  bottom: 11px;
+  height: 9px;
+  width: 200%;
+  z-index: 1;
+}
+
+
+.home-parent .aboutCustText {
+  /* margin-left: 55px !important; */
+}
+
+.home-parent .targetCustText::after {
+  content: ' ';
+  background: #00A099;
+  position: absolute;
+  right: 0px;
+  bottom: 7px;
+  height: 9px;
+  width: 74%;
+  z-index: -1;
+}
+
+.home-parent .aboutColored {
+  font-size: 24px;
+  color: #00A099;
+}
+
+.home-parent .featureCard-container {
+  z-index: 2;
+  text-align: start;
+  background-color: #FFFFFF;
+  width: 15%;
+  display: inline-block;
+  position: relative;
+  box-shadow: #0000001A;
+  box-shadow: 2px 2px 2px 2px #0000001A;
+  border-radius: 5px 100px 5px 5px;
+  /* margin-bottom: 200px; */
+  height: 200px;
+  min-height: 200px !important;
+}
+
+.home-parent .featureCard-index span {
+  font-size: 52px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'GopherBold';
+}
+
+.home-parent .featureCard-index p {
+  font-family: 'GopherMedium';
+  font-size: 14px;
+  color: #000000;
+  margin-left: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+
+}
+
+.home-parent .featureCard-index {}
+
+.home-parent .featureCard-container1:hover {
+  background-color: #717895 !important;
+}
+
+.home-parent .featureCard-container2:hover {
+  background-color: #7EAAA8 !important;
+}
+
+.home-parent .featureCard-container3:hover {
+  background-color: #BB7F84 !important;
+}
+
+.home-parent .featureCard-container4:hover {
+  background-color: #81A176 !important;
+}
+
+.home-parent .featureCard-container5:hover {
+  background-color: #7392A5 !important;
+}
+
+.home-parent .featureCard-container6:hover {
+  background-color: #6E9E79 !important;
+}
+
+
+.home-parent .featureCard-index span {
+  color: var(--c);
+}
+
+.home-parent .featureCard-container {
+  display: block !important;
+}
+
+
+/* .home-parent .featureCard-container:hover 
+.home-parent .featureCard-container .chiledSPan {
+  color: #FFFFFF !important;
+} */
+
+.featureCard-container:hover .aboutCard-text p {
+  color: #FFFFFF !important;
+  display: block !important;
+}
+
+
+.home-parent .featureCard-index:hover .chiledSPan {
+  color: white !important;
+}
+
+.home-parent #card-container:hover {
+  height: 100% !important;
+}
+
+.home-parent .featureCard-container {
+  overflow: hidden;
+}
+
+
+.home-parent .featureCard-container:hover {
+  height: max-content !important;
+  overflow: unset !important;
+}
+
+.home-parent .MuiPaper-root {
+  z-index: 2;
+  position: absolute;
+  text-align: start !important;
+}
+
+.home-parent .MuiTypography-h5 {
+  color: #000000;
+  font-family: 'GopherBold';
+  font-size: 37px;
+}
+
+.home-parent .MuiTypography-body2 {
+  color: #000000;
+  font-size: 12px;
+  font-family: 'GopherMedium';
+}
+
+.home-parent .targetGroup-cont-com {
+  width: 48%;
+  min-width: 230px;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.home-parent .targetGroup-cont-com img {
+  max-width: 100%;
+}
+
+.home-parent .targetGroup-cont-com .card-cont1 {
+  position: absolute;
+  right: 100px;
+  bottom: 22px;
+  color: white;
+  padding: 4px;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.home-parent .targetGroup-cont-com .card-cont2 {
+  position: absolute;
+  left: 109px;
+  bottom: 22px;
+  color: white;
+  padding: 4px;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.home-parent .targetGroup-cont-com .img-cont {
+  display: inline-block;
+  position: relative;
+}
+
+.home-parent .whyAnma-parent .whyAnmaBold {
+  margin-right: auto;
+  width: 100%;
+  font-family: 'GopherBold';
+  font-size: 41px;
+  text-align: start;
+}
+
+
+.home-parent .whyAnma-parent .whyAnma-light {
+  margin-right: auto;
+  width: 61%;
+}
+
+
+.home-parent .whyAnma-parent .whyAnma-regular {
+  font-family: 'GopherMedium';
+  text-align: left;
+  color: #000000;
+  padding-left: 0px
+}
+
+.home-parent .whyAnma-parent .whyAnma-regular ul li::marker {
+  font-size: 25px !important;
+}
+
+.home-parent .whyAnma-parent .whyAnma-regular ul li {
+  padding-bottom: 15px !important;
+}
+
+.home-parent .anmaFeatures-parent .cards-cont {
+  height: 288px;
+}
+
+
+.home-parent .platForm-parent .platformHeader-parent {
+  position: relative;
+  margin-bottom: 30px !important;
+}
+
+.home-parent .platForm-parent .headerBold {
+  position: relative;
+  font-family: 'GopherBold';
+  font-size: 50px;
+  text-align: start;
+  width: 90%;
+  padding-left: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.home-parent .platForm-parent .headerBold::after {
+  content: ' ';
+  background: #00A099;
+  position: absolute;
+  right: 0px;
+  bottom: 13px;
+  height: 9px;
+  width: 74%;
+  z-index: -1;
+}
+
+.home-parent .owl-carousel .owl-item img {
+  padding-left: 15px;
+    padding-right: 15px;
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+    border-bottom-right-radius: 23px;
+  
+}
+
+.platform-line {
+  position: relative;
+}
+
+.platformLine-chiled::after {
+  text-align: center;
+  content: ' ';
+  background: #BEBEBE;
+  position: absolute;
+  right: 119px;
+  bottom: 100px;
+  height: 3px;
+  width: 80%;
+  z-index: 1;
+  display: flex;
+}
+
+.home-parent .platForm-parent {
+  z-index: 2;
+}
+
+.home-parent .featureCard-container:hover .platForm-parent::after {
+  bottom: 341px !important;
+  background: red !important;
+}
+
+.home-parent .line-parent{
+  position: relative;
+}
+.home-parent .line-contet{
+  position: absolute;
+  text-align: center;
+  content: ' ';
+  background: #BEBEBE;
+  position: absolute;
+  right: 119px;
+  top: 211px;
+  bottom: 0px;
+  height: 3px;
+  width: 80%;
+  z-index: 1;
+  display: flex;
+  
+}
+
+.home-parent .imageLabel-cont{
+  position: relative;
+  top: 41px;
+  padding-right: 15px !important;
+}
+
+.home-parent .imageLabel{
+  padding-top: 2px;
+  font-size: 14px;
+  color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 100px;
+  background: #00A099;
+  text-align: end;
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
+  margin-left: auto;
+  height: 26px;
+  text-transform: lowercase;
+}
+
+
+.home-parent .card-backGround {
+  border-bottom-left-radius: 15px;
+  height: 185px;
+  position: absolute;
+  bottom: 0;
+  left: 34px;
+  width: 192px;
+  background-image: linear-gradient(to top, rgba(11, 5, 5, 0.8), rgba(212, 196, 196, 0.026));
+  z-index: 2;
+  border-bottom-right-radius: 15px;
+}
+
+.home-parent .container .img-name{
+  text-transform: lowercase !important;
+    font-size: 18px;
+    font-family: 'GopherBold';
+    color: white;
+    position: relative;
+    top: 90px;
+}
+.home-parent .container button:hover {
+  display: block;
+  background-color: #00A099 !important;
+}
+
+.home-parent .container button{
+text-transform: capitalize !important;
+display: none;
+font-family: 'GopherMedium';
+color: white;
+font-size: 16px;
+background-color: #00A099;
+padding: 8px;
+width: 50%;
+margin: auto;
+border-radius: 7px;
+}
+
+.home-parent .container:hover  .img-name {
+  font-size: 25px !important;
+  top: 0px !important;
+  
+
+}
+
+.home-parent .container .img-name{
+  margin-left: 10px;
+  display: block;
+  width: 195px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.home-parent .container:hover .img-name {
+  display: block;
+  margin-bottom: 40px;
+
+}
+.owl-theme .owl-nav{
+  display: none !important;
+}
+
+.owl-theme .owl-dots{
+  margin-top: 18px;
+}
+
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+  background-color: #00A099 !important;
+}
+
+.home-parent .card-backGround a{
+  text-decoration: unset !important;
+}

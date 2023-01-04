@@ -1,0 +1,126 @@
+@media(min-width: 768px){
+    /* .DoExam-component .Stepper-report-parent .header-cont .text-end{
+        position: relative;
+        bottom: 35px !important;
+            } */
+}
+
+@media(max-width: 768px) {
+    .DoTest-component .Stepper-parent {
+        width: 100% !important;
+    }
+
+    .DoTest-component .myform .nextBtt-cont .nextBtt-able {
+        width: 100% !important;
+    }
+
+    .DoTest-component .myform .nextBtt-cont .backBtt {
+        width: 100% !important;
+    }
+
+    .DoTest-component .header-cont {
+        margin: auto !important;
+    }
+
+    .DoTest-component .MuiStepper-root {
+        margin-top: 35px;
+    }
+
+    .DoTest-component .myform .header-form {
+        margin-bottom: 0px !important;
+    }
+
+    .DoTest-component .Stepper-parent .header-cont .header-bold {
+        font-size: 14px !important;
+    }
+
+    .DoTest-component .Stepper-parent .header-cont .header-regular {
+        font-size: 10px !important;
+    }
+
+    .DoTest-component .header-cont .header-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .DoTest-component .myform .xsBtt-cont {
+        padding-right: 0px !important;
+        padding-left: 1.5rem !important;
+    }
+
+    .DoExam-component .Stepper-report-parent .download-btt {
+        width: 100%;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .DoExam-component .Stepper-report-parent .generaltitle {
+        font-size: 16px !important;
+    }
+
+    .DoExam-component .Stepper-report-parent .generalText {
+        font-size: 12px !important;
+    }
+
+    .DoExam-component .text-end {
+        font-size: 12px !important;
+        position: relative;
+        bottom: 2px;
+    }
+
+    .DoExam-component .Stepper-report-parent {
+        width: 95% !important;
+    }
+
+    .DoTest-component .header-cont,
+    .DoExam-component .header-cont {
+        /* width: 95% !important; */
+        margin-bottom: 35px;
+        background-color: #F2F2F5;
+        padding: 8px !important;
+        border-radius: 10px;
+        margin-left: 0px !important;
+    }
+
+    .DoExam-component .Stepper-report-parent .next-title{
+        font-size: 16px !important  ;
+    }
+
+    .DoExam-component .Stepper-report-parent .xs-cont-white{
+        text-align: center!important;
+    }
+}
+
+@media(max-width: 768px) {
+    .DoExam-component .Stepper-parent {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .DoExam-component .header-cont .header-bold {
+        font-size: 14px !important;
+    }
+
+    .DoExam-component .header-regular {
+        font-size: 10px !important;
+    }
+
+    .DoExam-component .examQues-parent .examQues-ques span {
+        font-size: 12px !important;
+    }
+
+    .DoExam-component .examQues-parent .examQues-ques .examQues-ans .MuiToggleButtonGroup-root .MuiToggleButton-root {
+        font-size: 22px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .DoExam-component .Stepper-component .QontoStepIcon-completedIcon {
+        width: 8px !important;
+    }
+
+    .DoExam-component .examQues-parent .examQues-ans .yesOrNo .MuiToggleButton-root {
+        font-size: 14px !important;
+    }
+}

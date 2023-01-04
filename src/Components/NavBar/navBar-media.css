@@ -1,0 +1,21 @@
+@media (min-width: 1536px) {
+    .navBar-Parent .MuiContainer-root {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 899px) {
+    .navBar-Parent .dropDown-parent {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .navBar-Parent .dropDown-parent .dropDown-cont .typeName {
+        font-size: 14px;
+    }
+
+    .navBar-Parent .dropDown-parent .dropDown-cont .testName {
+        font-size: 12px;
+    }
+}

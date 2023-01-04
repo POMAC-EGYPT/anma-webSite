@@ -1,0 +1,175 @@
+@media(max-width: 1300px) and (min-width: 991px) {
+    .home-parent .featureCard-container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+
+}
+@media(max-width: 1024px) and (min-width: 768px) {
+    .home-parent #card-container {
+        width: 30% !important;
+        margin-top: 25px;
+    }
+}
+
+@media(max-width: 991px) and (min-width: 768px) {
+
+    .home-parent .featureCard-container,
+    .home-parent .anmaFeatures-parent #card-container {
+        width: 30% !important;
+        margin-bottom: 55px;
+    }
+
+    .home-parent .cards-cont-parent {
+        height: 500px
+    }
+}
+
+@media(max-width: 768px) and (min-width: 350px) {
+
+    .home-parent .featureCard-container,
+    .home-parent .anmaFeatures-parent #card-container {
+        width: 48% !important;
+        margin-bottom: 55px;
+    }
+
+    .home-parent .cards-cont-parent {
+        height: 900px
+    }
+}
+
+@media(min-width: 768px) {
+    .home-parent .aboutImg {
+        /* margin-top: auto; */
+    }
+
+
+}
+
+@media (max-width:768px) {
+    .home-parent .line-contet {
+        display: none !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .home-parent {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .home-parent .headerCont {
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .home-parent .headerBold {
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+
+    .home-parent .headerLight {
+        font-size: 16px !important;
+        text-align: center !important;
+        margin-bottom: 25px !important;
+    }
+
+    .home-parent .headerButton {
+        width: 40% !important;
+        margin: auto !important;
+
+    }
+
+    .home-parent .headerImg {
+        margin-left: 0px !important;
+    }
+
+    .home-parent .whyAnma-parent .whyAnmaBold {
+        font-size: 25px !important;
+        padding-bottom: 15px;
+    }
+
+    .home-parent .whyAnma-parent .whyAnma-light,
+    .home-parent .whyAnma-parent .whyAnma-regular {
+        font-size: 16px !important;
+    }
+
+    .home-parent .targetGroup-cont-com {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+
+    .home-parent .custText::after,
+    .home-parent .aboutCustText::after,
+    .home-parent .targetCustText::after,
+    .home-parent .platForm-parent .headerBold::after {
+        bottom: 0px !important;
+        height: 5px !important;
+    }
+
+    /* .home-parent .owl-stage{
+        transform: unset !important;
+    } */
+
+    .home-parent .aboutImg {
+        margin-top: 20% !important;
+    }
+
+    .home-parent .MuiTypography-h5 {
+        font-size: 16px !important;
+    }
+
+    /* .home-parent .targetGroup-cont-com{
+        position: unset;
+    } */
+    .home-parent .targetGroup-cont-com .card-cont2,
+    .home-parent .targetGroup-cont-com .card-cont1 {
+        width: 75% !important;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        color: white;
+        padding: 4px;
+        font-size: 17px;
+        line-height: 18px;
+        bottom: 1px !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    .home-parent .xs-header-home{
+        display: flex;
+        text-align: center;
+    }
+
+    .home-parent .owl-carousel .owl-item img{
+        height: 200px !important;
+    }
+
+    .home-parent .owl-carousel button.owl-dot{
+        display: none;
+    }
+
+    .container .card-backGround {
+        width: 85% !important;
+    }
+ 
+}
+
+
+
+@media(max-width: 768px) {
+    .home-parent #card-container {
+        width: 45% !important;
+        margin-top: 25px;
+    }
+
+    .home-parent .aboutBold {
+        font-size: 16px !important;
+    }
+
+    .home-parent .aboutLight {
+        font-size: 14px !important;
+    }
+}

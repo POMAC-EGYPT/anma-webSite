@@ -1,4 +1,22 @@
+@font-face {
+  font-family: 'GopherBold';
+  src: url('../src/css/Gopher-Bold.ttf');
+}
+@font-face {
+  font-family: 'GopherMedium';
+  src: url('../src/css/Gopher-Medium.ttf');
+}
+@font-face {
+  font-family: 'GopherLight';
+  src: url('../src/css/Gopher-Light.ttf');
+}
+@font-face {
+  font-family: 'GopherRegular';
+  src: url('../src/css/Gopher-Regular.ttf');
+}
+
 .App {
+  background-color: #FAFAFA;
   text-align: center;
 }
 
@@ -36,3 +54,40 @@
     transform: rotate(360deg);
   }
 }
+
+.app-cont{
+  background-color: #FAFAFA !important;
+}
+
+.MuiInputBase-input::placeholder{
+  font-size: 14px;
+  color: #707070;
+}
+/* .MuiInputBase-input {
+  border: 1px solid ##E9EAEC !important;
+  border-radius: 4px !important;
+} */
+
+.MuiFormControl-fullWidth {
+  border-radius: 5px !important;
+  border: 1px solid #E9EAEC !important;
+  background: #fffd !important;
+}
+.MuiFormControl-fullWidth:focus
+{
+  border: 1px solid black;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: unset !important;
+}
+.MuiFormControl-root .MuiInputLabel-formControl{
+  color: #707070 !important;
+  opacity: 57%;
+}
+
+#root{
+  overflow-x: hidden;
+}
+
+

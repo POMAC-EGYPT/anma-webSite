@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('../../css/Gopher-Medium.ttf');
+}
+
+.navBar-Parent header {
+    background-color: #353B50 !important;
+    box-shadow: none !important;
+}
+
+.navBar-Parent .AppLogo {
+    width: 82px;
+}
+
+.navBar-Parent .MuiBox-root {
+    justify-content: center;
+}
+
+.navBar-Parent .menuBtt {
+    margin-left: auto;
+}
+
+.navBar-Parent .MuiTab-root {
+    font-size: 20px !important;
+    text-transform: unset;
+    font-family: 'MyWebFont' !important;
+    margin-left: 36px;
+    color: #FFFFFF;
+}
+
+.navBar-Parent .Mui-selected {
+    color: #00A099 !important;
+}
+
+.navBar-Parent .MuiTabs-indicator {
+    background-color: #00A099;
+}
+
+.navBar-xs .MuiDialog-container {
+    background: #000000;
+    opacity: 70%;
+    overflow: hidden;
+}
+
+.navBar-xs .MuiTypography-root,
+.navBar-xs .MuiButtonBase-root {
+    font-size: 20px !important;
+    font-family: 'MyWebFont' !important;
+    text-align: center;
+    color: #FFFFFF;
+    justify-content: center;
+}
+
+.navBar-xs .MuiPaper-root {
+    background-color: unset !important;
+}
+
+.navBar-xs .MuiDivider-root {
+    background: #FFFFFF;
+    width: 300px;
+}
+
+.navBar-xs .MuiIconButton-root {
+    color: #FFFFFF !important;
+    height: 200px;
+}
+
+.navBar-xs svg {
+    font-size: 2.5rem;
+}
+
+.navBar-Parent .MuiTabs-flexContainer {
+    height: 63px !important;
+}
+
+.navBar-Parent .dropDown-parent .dropDown-cont {
+    padding-top: 20px !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 4px 2px -2px #00000014;
+    background-color: white !important;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: -moz-fit-content;
+    height: 330px;
+    overflow: hidden !important;
+
+}
+
+.navBar-Parent .dropDown-parent .dropDown-cont .typeTest-cont {
+    text-align: start;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 15px;
+}
+
+.navBar-Parent .dropDown-parent .dropDown-cont .typeTest-cont::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.navBar-Parent .dropDown-parent .dropDown-cont .typeName {
+    font-size: 20px;
+    color: #000000;
+    font-family: 'GopherBold';
+}
+
+.navBar-Parent .dropDown-parent .dropDown-cont .testName {
+    padding-left: 5px !important;
+    text-transform: lowercase;
+    text-align: start;
+    justify-content: start;
+    font-size: 16px;
+    font-family: 'GopherMedium';
+    color: #707070;
+
+}
+
+.navBar-Parent .dropDown-cont a {
+    text-decoration: unset !important;
+}
+
+.navBar-Parent .dropDown-parent .dropDown-cont a {
+    height: fit-content;
+}
+
+.navBar-Parent .dropDown-parent .MuiBox-root {
+    position: absolute;
+    z-index: 3;
+}
+
+.dropDown-parent .MuiListItem-root {
+    background-color: white !important;
+}
+
+.navBar-Parent .dropDown-parent .Grid {
+    background-color: white !important;
+}

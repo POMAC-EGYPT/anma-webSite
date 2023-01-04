@@ -1,0 +1,64 @@
+@media (min-width: 768px) {
+    .summary-parent a {
+        width: 20% !important;
+    }
+}
+
+
+@media(max-width:768px) {
+    .homeFooter-parent .popularTest {
+        padding-bottom: 30px !important;
+    }
+
+    .homeFooter-parent .sociealIcons-cont {
+        margin: auto;
+        display: flex;
+    }
+
+    .homeFooter-parent .sociealIcons-cont a {
+        padding-bottom: 10px;
+    }
+
+    .homeFooter-parent .popularTest .footertext-bold {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 18px;
+        text-align: start;
+    }
+
+    .homeFooter-parent .popularTest .col-12 {
+        padding-bottom: 10px;
+    }
+
+    .summary-parent .summary-cont {
+
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+    }
+
+    .homeFooter-parent .footertext,
+    .homeFooter-parent .popularTest a {
+        font-size: 14px !important;
+    }
+
+    .summary-parent a:first-child,
+    .summary-parent a:nth-child(2) {
+        font-size: 14px;
+        width: 50%;
+    }
+
+    .summary-parent a:nth-child(3),
+    .summary-parent a:nth-child(4),
+    .summary-parent a:nth-child(5) {
+        width: 33%;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 14px;
+    }
+    .summary-parent a:nth-child(5){
+        white-space: nowrap;
+    }
+}

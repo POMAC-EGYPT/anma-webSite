@@ -1,0 +1,48 @@
+@media(min-width: 992px) {
+    .tests-parent .card-parent .card {
+        border: unset;
+        width: 18% !important;
+        margin: 0px 15px;
+    }
+
+    .tests-parent .card-parent .container:hover .hoverTextCard {
+        width: 91%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .tests-parent .parent-header {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+
+    .tests-parent .card-parent .container:hover .hoverTextCard {
+        font-size: 10px !important;
+    }
+
+    .tests-parent .card-parent .container .card-backGround {
+        height: 155px;
+    }
+
+    .tests-parent .card-parent .container span {
+        font-size: 10px;
+    }
+
+    .tests-parent .card-parent {
+        margin-left: 20px !important;
+    }
+
+    .tests-parent .testType-header {
+        font-size: 16px;
+    }
+    .tests-parent .card-parent img {
+        height: 170px !important;
+    }
+}
+
+@media (max-width:500px) {
+    .tests-parent .card-parent .container .card-backGround {
+        width: 85% !important;
+    }
+}

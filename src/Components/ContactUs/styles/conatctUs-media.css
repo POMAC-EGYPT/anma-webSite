@@ -1,0 +1,54 @@
+@media (max-width: 991px) {
+    .contactUs-parent {
+        padding-right: 10px !important;
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 10px !important;
+    }
+
+    .contactUs-parent .contactUs-btt {
+        width: 100%;
+    }
+
+    .contactForm-parent {
+        padding-left: 0px !important;
+    }
+
+    .contactForm-parent .myform {
+        padding-left: 0px !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .contactUs-parent .contactInformation-parent .information-header {
+        font-size: 17px;
+    }
+
+    .contactUs-parent .contactInformation-parent .information-text { 
+        font-size: 9px
+    }
+
+    .contactUs-parent .contactInformation-parent .information-cont {
+        font-size: 10px;
+    }
+    .contactUs-parent .contactInformation-parent{
+        height: 40vh !important;
+    }
+    .contactUs-parent .circles-parent .circles-cont .fullCircle{
+        top: 103px !important;
+    }
+    .contactUs-parent .contactInformation-parent .data-cont{
+        height: 100% !important;
+        padding-bottom: 20px;
+    }
+    .contactUs-parent .contactInformation-parent .circles{
+        height: 100% !important;
+    }
+    .contactUs-parent .contactInformation-parent  .small-cont-card{
+        /* height: 75% !important; */
+    }
+    /* .contactUs-parent .contactInformation-parent{
+        height: 84vh !important;
+    } */
+}

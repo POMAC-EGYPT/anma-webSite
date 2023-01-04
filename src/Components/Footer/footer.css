@@ -1,0 +1,63 @@
+ .homeFooter-parent {
+   /* display: none !important; */
+    background-color: #353B50;
+   
+  }
+  
+   .homeFooter-parent .homeFooter-cont {
+    padding: 20px 40px
+  }
+  
+  
+   .homeFooter-parent .footertext,
+   .homeFooter-parent a {
+    text-align: left;
+    font-family: 'GopherLight';
+    color: #FFFFFF !important;
+    font-size: 16px;
+    text-decoration: unset;
+  }
+  
+   .homeFooter-parent .footer-img {
+    width: 130px;
+    padding-bottom: 20px;
+  }
+  
+   .homeFooter-parent .footertext-bold {
+    margin-right: auto;
+    font-family: 'GopherBold';
+    color: #FFFFFF !important;
+    font-size: 30px;
+    display: flex;
+  }
+  
+  
+   .homeFooter-parent .popularTest a {
+    cursor: pointer;
+  }
+  
+   .homeFooter-parent .sociealIcons {
+    width: 100%;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .summary-parent {
+    width: 100%;
+    background-color: #7C839B !important;
+    display: flex;
+    justify-content: center;
+  }
+  .summary-parent .summary-cont{
+    width: 80%;
+    margin: auto;
+  }
+
+  .summary-parent a{
+    padding-left: 25px;
+  }
+
+  .homeFooter-parent .sociealIcons  img{
+    width: 50px;
+    padding-right: 10px;
+}
