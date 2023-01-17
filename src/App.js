@@ -21,19 +21,25 @@ const Tests = React.lazy(() => import("./Components/Tests/ParentComponent"));
 export default function App() {
   const navigate = useNavigate();
   const [pageNumber, setPageNumber] = useState("one");
+  const [doTest, setDoTest] = useState(false)
+  const [about, setAbout] =  useState(false)
   // const [isFooter, setIsFooter] = useState(true);
 
   useEffect(() => {
     console.log(window.location.href.toString().split("/")[3]);
     console.log(setPageNumber);
     console.log(pageNumber);
+    
+
+    console.log(doTest)
   });
 
-  const scroll = () => {
-    const section = document.querySelector("#aboutUs");
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+ 
+  const handleDoTest= (data)=>{
+    setDoTest(data)
+  }
 
+  
   //handle page routing
   const handleChange = (event, newValue) => {
     console.log(event);
@@ -47,31 +53,32 @@ export default function App() {
       navigate(`/Home`);
       navigate(0);
     } else if (newValue == "three") {
+      
+      localStorage.setItem('aboutUs', true)
       navigate(`/Home`);
       navigate(0);
-      setTimeout(scroll(), 5000);
-      //  scroll();
     } else if (newValue == "two") {
       navigate(`/Tests`);
       navigate(0);
     }
   };
 
+  console.log(about)
   console.log(pageNumber);
   console.log(window.location.href.toString().split("/")[3].charAt(0));
   return (
     <div className="App">
       <Link to="/ContactUs" />
       <div>
-        <NavBar handleChange={handleChange} pageNumber={pageNumber} />
+        <NavBar  handleChange={handleChange} pageNumber={pageNumber}  doTest= {doTest}/>
       </div>
 
       <div className="d-flex flex-column">
         <div className="app-cont row col-12 col-md-11 justify-content-center m-auto container-fluid px-0">
           <Routes>
-            <Route exact path="Home" element={<Home />} />
+            <Route exact path="Home" element={<Home about= {about} />} />
             <Route path="Tests" element={<Tests />} />
-            <Route path="DoTest" element={<DoTest />} />
+            <Route path="DoTest" element={<DoTest handleDoTest= {handleDoTest} />} />
             <Route path="ContactUs" element={<ContactUs />} />
             <Route path="*" element={<Home />} />
           </Routes>

@@ -24,6 +24,8 @@ export default class Tests extends React.Component {
   };
 
   componentDidMount(){
+    localStorage.clear();
+    // localStorage.setItem("test", false)
     this.setState({
       currentURL: window.location.href
     })

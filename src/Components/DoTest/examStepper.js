@@ -32,13 +32,19 @@ import ExamQues from "./examQues";
 import "./styles/doTest.css";
 import "./styles/doTest-media.css";
 import Button from "@mui/material/Button";
-import MyFont from '../../css/Gopher-Regular.ttf'
-import MyBold from '../../css/Gopher-Bold.ttf'
+import MyFont from "../../css/Gopher-Regular.ttf";
+import MyBold from "../../css/Gopher-Bold.ttf";
 
 //pdf
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import { Page, Text, View, Document, StyleSheet, Font } from "@react-pdf/renderer";
-
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  Font,
+} from "@react-pdf/renderer";
 
 function LinearProgressWithLabel(props) {
   return (
@@ -65,10 +71,9 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-
 //Fonts registration
-Font.register({ family: 'GopherRegular', src: MyFont })
-Font.register({ family: 'GopherBold', src: MyBold })
+Font.register({ family: "GopherRegular", src: MyFont });
+Font.register({ family: "GopherBold", src: MyBold });
 
 // Create styles
 const styles = StyleSheet.create({
@@ -85,34 +90,34 @@ const styles = StyleSheet.create({
     height: window.innerHeight,
   },
   title: {
-    paddingBottom: '20px',
-    fontFamily: 'GopherBold',
-    fontSize: '25px',
-    color: '#000000',
+    paddingBottom: "20px",
+    fontFamily: "GopherBold",
+    fontSize: "25px",
+    color: "#000000",
   },
   text: {
-    fontFamily: 'GopherRegular',
-     color: '#707070',
-     fontSize: '18px'
+    fontFamily: "GopherRegular",
+    color: "#707070",
+    fontSize: "18px",
   },
-  
 });
 
-
 export default function HorizontalNonLinearStepper(props) {
-  console.log(props.scorePercentage);
-  console.log(props.userTest.type.name_en);
+ 
+
   const formik = useFormik({
     initialValues: {
       fullArrayAns: [],
       fullArrayQues: [],
     },
     onSubmit: (values, fields) => {
+      alert('tmam')
       console.log(values);
     },
   });
 
   //verify
+  const [func, setFunc]= React.useState(false)
   const [exam, setExam] = React.useState([]);
   const [steps, setSteps] = React.useState([]);
   const [activeStep, setActiveStep] = React.useState(
@@ -131,8 +136,9 @@ export default function HorizontalNonLinearStepper(props) {
   console.log(prevCount);
 
   const handleTest = (data) => {
+    console.log(activeStep);
     console.log(data);
-    setExam(data.answer, 0, activeStep);
+    console.log(data.answer);
 
     formik.setFieldValue(`fullArrayAns.${activeStep}`, data.answer);
     formik.setFieldValue(`fullArrayQues.${activeStep}`, activeStep);
@@ -140,14 +146,12 @@ export default function HorizontalNonLinearStepper(props) {
     console.log(props.userTest.exams.length);
     console.log(activeStep + 1);
 
+    console.log( formik.values.fullArrayAns)
     if (props.userTest.exams.length === activeStep + 1) {
-      props.handleGetDoneQuesExam(
-        formik.values.fullArrayAns,
-        formik.values.fullArrayQues
-      );
+      setFunc(true)
     }
 
-    //
+    // setExam(data.answer, 0, activeStep);
   };
 
   // useEffect didMount
@@ -162,6 +166,16 @@ export default function HorizontalNonLinearStepper(props) {
   // useEffect didUpdate
   useEffect(() => {
     console.log(formik.values.fullArrayAns);
+    console.log(formik.values.fullArrayQues);
+
+    if(func){
+      props.handleGetDoneQuesExam(
+        formik.values.fullArrayAns,
+        formik.values.fullArrayQues
+      );
+      setFunc(false)
+    }
+   
   });
 
   const totalSteps = () => {
@@ -268,54 +282,41 @@ export default function HorizontalNonLinearStepper(props) {
     },
   }));
 
-  // Create Document Component
-  const MyDocument = () => (
+
+   // Create Document Component
+   const MyDocument = () => (
     <Document>
-      <Page size="A4" style={styles.page} >
+      <Page size="A4" style={styles.page}>
         <View style={styles.section}>
-          <Text style={styles.title}>    These results indicate that...</Text>
+          <Text style={styles.title}> These results indicate that...</Text>
         </View>
 
+        <View style={styles.section}>
+          <Text style={styles.text}>{props.reportData.description}</Text>
+        </View>
 
         <View style={styles.section}>
-        <Text style={styles.text}> 
-          {props.reportData.description}
-          </Text>
-          </View>
+          <Text style={styles.title}>What should I do Now?</Text>
+          <Text style={styles.text}>{props.reportData.should_do_en}</Text>
+        </View>
 
-
-          <View style={styles.section}>
-          <Text style={styles.title}>
-          What should I do Now?
-          </Text>
-          <Text style={styles.text}> 
-              {props.reportData.should_do_en}
+        <View style={styles.section}>
+          <Text style={styles.title}>What next?</Text>
+          <div
+            className="bg-white p-4 d-grid mt-4"
+            style={{ borderRadius: "8px" }}
+          >
+            <Text className="next-title">
+              Talk with a qualified professional
             </Text>
-          </View>
-
-
-        <View style={styles.section}>
-       
-                    <Text style={styles.title}>What next?</Text>
-                    <div
-                      className="bg-white p-4 d-grid mt-4"
-                      style={{ borderRadius: "8px"}}
-                    >
-                      <Text className="next-title">
-                        Talk with a qualified professional
-                      </Text>
-                      <Text  style={styles.text}> 
-                        A free, confidential call could quickly help you get the
-                        support you need. Your call will be answered by an
-                        assistant psychologist who will listen to your concerns
-                        before explaining your options and suggesting the most
-                        appropriate treatment.
-                      </Text>
-                      <Text className="next-title">
-                        Call us today: 0203 326 9160
-                      </Text>
-                      </div>
-                    
+            <Text style={styles.text}>
+              A free, confidential call could quickly help you get the support
+              you need. Your call will be answered by an assistant psychologist
+              who will listen to your concerns before explaining your options
+              and suggesting the most appropriate treatment.
+            </Text>
+            <Text className="next-title">Call us today: 0203 326 9160</Text>
+          </div>
         </View>
       </Page>
     </Document>
@@ -329,11 +330,16 @@ export default function HorizontalNonLinearStepper(props) {
           }
         >
           <div className="header-parent">
-            <div className="col-12 header-cont row justify-content-center">
+            <div className="col-12 header-cont row ms-0 justify-content-between">
+              {props.finalScore && (
+                <div className="col-5 col-sm-4 col-md-3 col-xl-2">
+                  <img src={props.userTest.imagePath} className="header-img" />
+                </div>
+              )}
               <div
                 className={
                   props.finalScore
-                    ? "text-start flex-column row justify-content-around"
+                    ? "text-start flex-column row justify-content-around col-7  col-sm-8  col-md-9 col-xl-10 data-cont"
                     : "text-center flex-column row justify-content-around"
                 }
               >
@@ -346,6 +352,12 @@ export default function HorizontalNonLinearStepper(props) {
                 >
                   {props.userTest.name_en}
                 </span>
+                {props.finalScore && (
+                  <div className="text-end d-flex justify-content-end xl-appear">
+                    <img src={Complete} className="Completesvg" />
+                    <span className="examcompStatus text-end">Completed</span>
+                  </div>
+                )}
                 <span className="header-regular">
                   {props.finalScore
                     ? `Age from ${
@@ -355,10 +367,13 @@ export default function HorizontalNonLinearStepper(props) {
                       } years to ${
                         props.userTest.type ? props.userTest.type.age_to : null
                       } years`
-                    : `The test consists of ${props.testExam && props.testExam.length} questions that must be answered, There are two types of bad, the first type is answered yes or no, and the second type choose the answer from 1 to 5, and when you finish the answers, you can send them and wait for the result`}
+                    : `The test consists of ${
+                        props.testExam && props.testExam.length
+                      } questions that must be answered, There are two types of bad, the first type is answered yes or no, and the second type choose the answer from 1 to 5, and when you finish the answers, you can send them and wait for the result`}
                 </span>
+
                 {props.finalScore && (
-                  <div className="text-end">
+                  <div className="text-start d-flex justify-content-start xs-appear">
                     <img src={Complete} className="Completesvg" />
                     <span className="examcompStatus text-end">Completed</span>
                   </div>
@@ -395,26 +410,28 @@ export default function HorizontalNonLinearStepper(props) {
                 </div>
 
                 <div className="row col-12">
-                  <span className="firstExpretion col-12 col-md-7 col-lg-8 pe-0">
-                    you have a strong likelihood of being autistic.
-                  </span>
+                  <div className="row col-12  btt-title-cont pe-0">
+                    <span className="firstExpretion col-12 col-md-7 col-lg-8 pe-0">
+                      {props.reportData.title}
+                    </span>
 
-                  <div className="download-cont col-12 col-md-5 col-lg-4 ms-auto ps-0">
-                    <PDFDownloadLink
-                      document={<MyDocument />}
-                      fileName="movielist.pdf"
-                      style={{
-                        textDecoration: "none"
-                      }}
-                    >
-                      <Button className="download-btt ">
-                        <img src={DownloadSvg} className="download-svg" />
-                        Download report PDF
-                      </Button>
-                    </PDFDownloadLink>
+                    <div className="download-cont col-12 col-md-5 col-lg-4 ms-auto ps-0">
+                      <PDFDownloadLink
+                        document={<MyDocument />}
+                        fileName="movielist.pdf"
+                        style={{
+                          textDecoration: "none",
+                        }}
+                      >
+                        <Button className="download-btt ">
+                          <img src={DownloadSvg} className="download-svg" />
+                          Download report PDF
+                        </Button>
+                      </PDFDownloadLink>
+                    </div>
                   </div>
 
-                  <div className="col-12 mt-5">
+                  <div className="col-12 mt-4">
                     <div class="progress">
                       <div
                         class="progress-bar"
@@ -484,7 +501,8 @@ export default function HorizontalNonLinearStepper(props) {
                           testExam={props.testExam}
                           handleTest={handleTest}
                           handleGetDoneQuesExam={props.handleGetDoneQuesExam}
-                          fullArray={formik.values.fullArray}
+                          fullArrayAns={formik.values.fullArrayAns}
+                          fullArrayQues={formik.values.fullArrayQues}
                           testExams={props.userTest.exams}
                           reportAppear={props.reportAppear}
                         />

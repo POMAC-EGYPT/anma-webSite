@@ -11,12 +11,12 @@ import axios from "axios";
 import HomeChild from "./home";
 
 //svg files
-import Card1 from "../../svg/Group68630.svg";
-import Card2 from "../../svg/Group68634.svg";
-import Card3 from "../../svg/Group68633.svg";
-import Card4 from "../../svg/Group68628.svg";
-import Card5 from "../../svg/Group68636.svg";
-import Card6 from "../../svg/Group68638.svg";
+import Card1 from "../../svg/img2.svg";
+import Card2 from "../../svg/img3.svg";
+import Card3 from "../../svg/img4.svg";
+import Card4 from "../../svg/img5.svg";
+import Card5 from "../../svg/img6.svg";
+import Card6 from "../../svg/img.svg";
 
 export default class Home extends React.Component {
   state = {
@@ -33,7 +33,7 @@ export default class Home extends React.Component {
       },
       {
         color: "#FFD4D7",
-        text: "Support the stages of normal growth and provide guidance and recommendations to parents so that the child can grow and acquire the necessary skills to support his strengths",
+        text: "Support the stages of normal growth and provide guidance and recommendations to parents so that the child can grow and acquire the necessary skills to support his strengths ",
         svgFiles: Card3,
       },
       {
@@ -96,8 +96,17 @@ export default class Home extends React.Component {
     });
   };
   componentDidMount() {
+    console.log(localStorage.getItem('aboutUs'))
     this.getData();
+    if(localStorage.getItem('aboutUs')){
+      setTimeout(this.handlescroll(), 2000);
+      localStorage.clear();
+    }
   }
+   handlescroll = () => {
+    const section = document.querySelector("#aboutUs");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   render() {
     return (

@@ -6,6 +6,10 @@ import NavBar from "./NavBar";
 //styles
 import "./navBar.css";
 
+//global data
+import { userInfo } from '../../GlobalData/globalData'
+
+
 //axios
 import axios from "axios";
 
@@ -13,7 +17,9 @@ import axios from "axios";
 export default class TopNavBar extends React.Component {
   state = {
     open: false,
-    allTypeOfTests: []
+    allTypeOfTests: [],
+    isOffline: false,
+    isTest: false,
   };
 
   getData= ()=>{
@@ -29,21 +35,30 @@ export default class TopNavBar extends React.Component {
  })
 }
   componentDidMount() {
-    this.getData();
+    console.log(this.props.doTest)
+    this.getData('test');
+
+ 
   }
+  
+ 
 
   render() {
-    console.log(this);
+    console.log(this.state.isOffline);
+    
     return (
       <div className="navBar-Parent" id="navBar">
         <NavBar
-          handleChange={this.props.handleChange}
+        handleChange= {this.props.handleChange}
           pageNumber={this.props.pageNumber}
           open={this.state.open}
           handleClickOpen={this.handleClickOpen}
           handleClose={this.handleClose}
           allTypeOfTests= {this.state.allTypeOfTests}
+          isTest= {this.state.isTest}
+          doTest= {this.props.doTest}
         />
+        {this.state.isOffline ? 'ssasasasas' : null}
       </div>
     );
   }

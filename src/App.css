@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: 'GopherMedium';
-  src: url('../src/css/Gopher-Medium.ttf');
+  src: url('../src/css/Gopher-Regular.ttf');
 }
 @font-face {
   font-family: 'GopherLight';
@@ -88,6 +88,8 @@
 
 #root{
   overflow-x: hidden;
+  height: 100vh;
+  background-color: #FAFAFA !important; 
 }
 
 

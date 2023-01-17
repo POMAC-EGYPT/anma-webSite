@@ -20,14 +20,15 @@
 .DoTest-component .header-cont,
 .DoExam-component .header-cont
 {
+    padding-left: 10px !important;
     margin-bottom: 35px;
     background-color: #F2F2F5;
-    padding: 8px !important;
+    padding: 8px ;
     border-radius: 10px;
 }
 
 .DoTest-component .header-cont .header-img {
-    width: 150px;
+   width: 150px;
     height: 150px;
 }
 
@@ -46,7 +47,7 @@
 }
 
 
-.DoTest-component .Stepper-component .MuiButtonBase-root svg {
+.DoTest-component .Stepper-component .Mui-active svg {
     color: #00A099 !important;
     padding: 3px;
 }
@@ -63,7 +64,7 @@
 
 .DoTest-component .Stepper-component .Mui-completed {
     color: #00A099;
-    padding: 0px !important;
+     padding: -1px !important; 
 }
 
 
@@ -74,6 +75,7 @@
 }
 
 .DoTest-component .Stepper-component .Mui-disabled span {
+    left: calc(-50% + 197px)!important;
     color: #BEBEBE !important;
     border-color: #BEBEBE !important;
 }
@@ -128,12 +130,14 @@
 }
 
 .DoTest-component .myform .nextBtt-cont .nextBtt-able {
+    border-radius: 8px;
+    height: 47px;
     text-transform: none;
     background-color: #00A099;
     color: #FFFFFF;
     font-size: 14px;
     width: 150px;
-    font-family: 'GopherMedium';
+    font-family: 'GopherRegular';
     margin-top: 22px !important;
 }
 
@@ -146,11 +150,14 @@
 }
 
 .DoTest-component .myform .nextBtt-cont .backBtt {
+    border-radius: 8px;
+    height: 47px;
     background-color: #FFFFFF !important;
     color: #00A099 !important;
     border: 1px solid #00A099 !important;
     width: 150px;
     margin-top: 22px !important;
+    font-family: 'GopherRegular';
 }
 
 .DoTest-component .myform .text-danger {
@@ -183,7 +190,7 @@
 .dialog-parent img{
     margin: auto;
     display: flex;
-    width: 370px;
+    width: 70%;
     height: 350px;
 }
 
@@ -198,17 +205,19 @@
     text-align: center;
     color: #707070;
     font-size: 16px;
-    font-family: 'GopherMedium';
+    font-family: 'GopherRegular';
 }
 
 .dialog-parent button, .dialog-parent button:hover{
+    border-radius: 8px;
+    height: 43px;
     margin: auto;
     text-transform: none;
     background-color: #00A099;
     color: #FFFFFF;
     font-size: 14px;
     width: 150px;
-    font-family: 'GopherMedium';
+    font-family: 'GopherRegular';
     margin-top: 20px !important;
     margin-bottom: 25px;
     
@@ -315,7 +324,11 @@
     text-transform: unset;
 }
 
+.DoExam-component .examQues-parent .nextBtt-cont button{
+    border-radius: 8px !important;
+}
 .DoExam-component .examQues-parent button{
+   
     background-color: #00A099;
     color: #FFFFFF;
     font-size: 16px;
@@ -432,7 +445,7 @@ width: 100% !important;
 
 .waiting-parent .content-cont .E-mail-text{
     font-size: 16px;
-    font-family: 'GopherMedium';
+    font-family: 'GopherRegular';
     color: #707070;
 }
 
@@ -451,6 +464,7 @@ width: 100% !important;
     background-color: #d3d3d5 !important;
     margin: auto;
     margin-top: 20px;
+    border-radius: 30px;
 }
 
 .waiting-parent .waiting-cont .MuiLinearProgress-bar{
@@ -498,13 +512,16 @@ width: 100% !important;
 }
 
 .DoExam-component .Stepper-report-parent .download-btt {
+    width: 90%;
     background-color: #00A099;
     color: #FFFFFF;
     font-size: 14px !important;
     text-transform: unset !important;
-    justify-content: end;
     margin-left: auto;
     display: flex;
+    height: 40px;
+    border-radius: 8px !important;
+    font-family: 'GopherRegular' !important;
 }
 
 .DoExam-component .Stepper-report-parent .download-svg{
@@ -584,4 +601,21 @@ width: 100% !important;
     font-size: 25px !important;
 }
 
+.DoTest-component .MuiStepIcon-text{
+    display: none !important;
+}
+
+.DoTest-component .MuiStep-alternativeLabel .Mui-disabled{
+    /* left: calc(-50% + 27px)!important; */
+}
+
+
+ .PrivatePickersSlideTransition-root .Mui-selected,
+ .PrivatePickersSlideTransition-root  .Mui-selected:hover{
+    background-color: #00A099 !important;
+}
+
+.DoExam-component .Stepper-report-parent .header-parent .header-cont {
+    margin-top: 15px !important;
+}
 

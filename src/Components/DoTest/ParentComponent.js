@@ -4,6 +4,9 @@ import React from "react";
 // contexts
 import AuthContext from "../../contexts/authContext";
 
+//global data
+import { userInfo } from '../../GlobalData/globalData'
+
 //axios
 import axios from "axios";
 
@@ -37,12 +40,27 @@ export default class DoTest extends React.Component {
     reportData: '',
     reportId: '',
     finalScore: '',
+    isTest : false,
   };
 
-  componentDidMount() {
+  componentDidMount(){
+    this.setState({
+      isTest: true
+    })
+    // localStorage.setItem("test", true);
     this.getTest();
     console.log(this.state.userTest);
   }
+
+  componentDidUpdate(){
+   if(this.state.finalScore){
+    this.props.handleDoTest(false)
+   }else{
+    this.props.handleDoTest(true)
+   }
+  }
+
+ 
 
   //firstViewFunc
   handleFirstViewData = (data) => {
@@ -135,29 +153,21 @@ export default class DoTest extends React.Component {
 
   //doEexam functions
   handleGetDoneQuesExam = (data, questionsNumb) => {
+    console.log(data)
+    console.log(questionsNumb)
     const answer= data
     const question= questionsNumb
-
-
-
-  
-
-    
     let form = new FormData()
     const questions = question.map((data, index) => {
       console.log(data);
       console.log(this.state.userTest.exams[data].values);
       const questionsID = this.state.userTest.exams[data].id;
       return  form.append(`exams[${index}]`, questionsID)
-
-      // return `questions[${data}]: ${questionsID}`;
+      
     });
 
     console.log(questions)
     console.log(answer)
-
-
-    
 
     
     this.setState({
@@ -180,19 +190,22 @@ export default class DoTest extends React.Component {
     }).then((res) => {
       if (res.data.status) {
         console.log(res.data.data);
-
         this.setState({
           reportData: res.data.data.report,
           reportId: res.data.data.report_id,
           finalScore: res.data.data.grade,
           isWaitingReport: false,
-          scorePercentage: res.data.data.grade / res.data.data.test.grade * 100
+          scorePercentage: res.data.data.grade / res.data.data.test.grade * 100,
+          
+         
         })
           
-        
+       
        
       }
     });
+
+    // this.props.handleDoTest(true)
   };
 
   getTest = () => {
@@ -261,7 +274,6 @@ export default class DoTest extends React.Component {
   }));
 
   render() {
-    console.log(this.state.isWaitingReport);
     return (
       <>
         {this.state.isWaitingReport ? (

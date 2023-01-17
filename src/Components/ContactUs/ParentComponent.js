@@ -24,7 +24,8 @@ export default class ContactUs extends React.Component {
     message: null,
   };
 
-  componentDidMount(){   
+  componentDidMount(){  
+    localStorage.clear();
   }
 
   handleSubmit = (data) => {

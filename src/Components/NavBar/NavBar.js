@@ -35,6 +35,7 @@ import A from "../../svg/HendElgoharyPortfolio-Work-2.svg";
 import B from "../../svg/HendElgoharyPortfolio-Work-6.svg";
 import C from "../../svg/path-1_24_.svg";
 import AnmaLogo from "../../svg/logoanma.svg";
+import InternetStatue from "../../svg/internetStatue.svg";
 
 //router
 import { useNavigate } from "react-router-dom";
@@ -46,10 +47,50 @@ import "./navBar-media.css";
 const pages = ["Home", "Tests", "About us", "Contact us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
+
 export default (props) => {
+  console.log(props.doTest)
+  console.log(props.isTest)
+ 
   //dropDown
+  const [test, setTest] = React.useState("");
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [openMenue, setOpenMenue] = React.useState(false);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [isTest, setIsTest]= useState('')
+
+  useEffect(() => {
+   
+    // Update network status
+    const handleStatusChange = () => {
+      setIsOnline(navigator.onLine);
+    };
+
+    // Listen to the online status
+    window.addEventListener("online", handleStatusChange);
+
+    // Listen to the offline status
+    window.addEventListener("offline", handleStatusChange);
+
+    // Specify how to clean up after this effect for performance improvment
+    return () => {
+      window.removeEventListener("online", handleStatusChange);
+      window.removeEventListener("offline", handleStatusChange);
+    };
+  }, [isOnline]);
+
+
+  useEffect(() => {
+
+    // debugger
+    window.addEventListener('scroll', handleTest, true);
+  
+  })
+const handleTest= ()=>{
+  setOpenMenue(false);
+}
+
+  
   const handleClick = () => {
     setOpenMenue((prev) => !prev);
   };
@@ -61,6 +102,10 @@ export default (props) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
+
+
+  
+  const [doTest, setDoTest] = useState('')
   const [currentURL, setCurrentURL] = useState("one");
   const [dynamicURl, setDynamicURl] = useState("");
 
@@ -83,6 +128,14 @@ export default (props) => {
     return <Slide direction="up" ref={ref} {...props} />;
   });
 
+ 
+  console.log(isTest)
+  console.log(props.isTest)
+  console.log(doTest)
+
+  const handleAlert = ()=>{
+    alert('sssssssss')
+  }
   return (
     <>
       <AppBar position="static">
@@ -97,21 +150,25 @@ export default (props) => {
               <img className="AppLogo" src={AnmaLogo} />
             </Button>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                className="menuBtt"
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleClickOpen}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-            </Box>
+            {/* {props.isTest == 'false' && ( */}
+            {!props.doTest &&(
+              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+                <IconButton
+                  className="menuBtt"
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleClickOpen}
+                  color="inherit"
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Box>
+            )}
 
-            {dynamicURl !== "D" && (
+            {/* {dynamicURl !== "D" && ( */}
+            {!props.doTest &&(
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 <Tabs
                   value={
@@ -137,7 +194,8 @@ export default (props) => {
             )}
 
             <Box sx={{ flexGrow: 0 }}>
-              {dynamicURl !== "D" && (
+              {/* {dynamicURl !== "D" && ( */}
+              {!props.doTest &&(
                 <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                   <IconButton className="ps-3">
                     <img src={C} />
@@ -232,11 +290,11 @@ export default (props) => {
         </Container>
       </AppBar>
 
-      <ClickAwayListener onClickAway={handleClickAway}>
-        <Box className="dropDown-parent">
-          {openMenue ? (
-            <Box sx={{ width: 1, position: "absolute" }}>
-              <div className="dropDown-cont col-12 row">
+      <ClickAwayListener     onClickAway={handleClickAway}>
+        <Box className= {!openMenue ? 'd-none' :   "dropDown-parent"}>
+          {/* {openMenue ? ( */}
+            <Box   sx={{ width: 1, position: "absolute" }}>
+              <div  className="dropDown-cont col-12 row">
                 {props.allTypeOfTests
                   ? props.allTypeOfTests.map((data) => {
                       console.log(data);
@@ -247,14 +305,14 @@ export default (props) => {
                         });
                         console.log(tests.name_en);
                         return (
-                          <div className="typeTest-cont   col-md-3">
+                          <div key= {test.id} className="typeTest-cont   col-md-3">
                             <a className="" href="Tests">
                               <span className="typeName">{data.name_en}</span>
                             </a>
                             <div className="tests-cont row">
                               {data.tests.slice(0, 7).map((test) => {
                                 return (
-                                  <span className="testName">
+                                  <span  key= {test.id} className="testName">
                                     <Button
                                       className="testName"
                                       onClick={(e) => {
@@ -280,9 +338,20 @@ export default (props) => {
                   : null}
               </div>
             </Box>
-          ) : null}
+           {/* )} */}
         </Box>
       </ClickAwayListener>
+      {!isOnline && (
+        <div className="internetStatus py-1">
+          <div className="internetStatus-cont">
+            <img src={InternetStatue} />
+            <h1 className="offline">
+              Oops!: We cannot establish connection with anma services, please
+              check your network settings..
+            </h1>
+          </div>
+        </div>
+      )}
     </>
   );
 };

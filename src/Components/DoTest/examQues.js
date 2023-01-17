@@ -23,12 +23,19 @@ export default (props) => {
   console.log(prevCount);
 
   //useEffect didMount
-  // useEffect(() => {
-  //   if (props.fullArray[props.activeStep]) {
-  //     formik.setFieldValue("answer", props.fullArray[props.activeStep]);
-  //     setAlignment(props.fullArray[props.activeStep]);
-  //   }
-  // }, []);
+  useEffect(() => {
+    console.log(props)
+    console.log(props.fullArrayQues)
+    console.log(props.activeStep)
+    console.log(alignment)
+    console.log(props.fullArrayAns[props.activeStep + 1])
+   
+    if (props.fullArrayAns[props.activeStep]) {
+      console.log(props.fullArrayAns[props.activeStep][1])
+        formik.setFieldValue("answer", props.fullArrayAns[props.activeStep]);
+        setAlignment(props.fullArrayAns[props.activeStep]);
+    }
+}, []);
 
   //formik
   const formik = useFormik({
@@ -51,7 +58,7 @@ export default (props) => {
   });
 
   const handleAlignment = (event, newAlignment) => {
-    console.log(event.target.id);
+    console.log(event.target);
     console.log(newAlignment);
     let arr = [event.target.id, newAlignment];
 
@@ -61,6 +68,7 @@ export default (props) => {
     setAlignment(newAlignment);
     formik.setFieldValue(`answer`, arr);
   };
+
 
   return props.testExams.map((item, index) => {
     if (index === props.activeStep) {
@@ -93,6 +101,7 @@ export default (props) => {
                   </ToggleButtonGroup>
                 </div>
               ) : (
+                <div className="options">
                 <ToggleButtonGroup
                   value={alignment}
                   exclusive
@@ -100,6 +109,7 @@ export default (props) => {
                   aria-label="text alignment"
                 >
                   {item.values.map((answer, answerInd) => {
+                    console.log(answerInd)
                     return (
                       <ToggleButton
                         key={answerInd.id}
@@ -112,16 +122,20 @@ export default (props) => {
                     );
                   })}
                 </ToggleButtonGroup>
+                </div>
               )}
 
-              <div className="nextBtt-cont d-flex justify-content-between">
+              <div className= {props.activeStep !== 0 ? "nextBtt-cont d-flex justify-content-between" : "nextBtt-cont d-flex justify-content-center"}>
                 {props.activeStep !== 0 && (
                   <Button onClick={props.handleBack} className="backBtt">
                     Back
                   </Button>
                 )}
 
-                <Button type="submit" className="nextBtt-able" disabled= {formik.values.answer.length === 0}>
+                <Button
+                 type="submit"
+                 className={props.activeStep === 0 ? 'xs-btt nextBtt-able' : 'nextBtt-able'}
+                 disabled= {formik.values.answer.length === 0}>
                   Next
                 </Button>
               </div>

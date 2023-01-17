@@ -48,7 +48,7 @@ useEffect(() => {
     console.log(props.secondViewData.birthDate)
    
     formik.setFieldValue('fullNamme' , props.secondViewData.fullNamme)
-    formik.setFieldValue('birthDate' ,  `${props.secondViewData.birthDate.$y}-${props.secondViewData.birthDate.$M + 1}-${props.secondViewData.birthDate.$D}`)
+    formik.setFieldValue('birthDate' ,  `${props.secondViewData.birthDate}`)
     formik.setFieldValue('chiledGender' , props.secondViewData.chiledGender)
   }
  }, [])
@@ -59,9 +59,17 @@ useEffect(() => {
     return <img src={Calendar} />;
   };
 
-  console.log(formik.values.birthDate);
+  console.log(formik.values)
+  console.log(formik.touched)
+  console.log(formik.errors)
+  console.log(formik.errors.birthDate);
   console.log(formik.values.birthDate.$M + 1)
   console.log(`${formik.values.birthDate.$y}-${formik.values.birthDate.$M + 1}-${formik.values.birthDate.$D}`)
+
+//prevent user writting in filed
+  const onKeyDown = (e) => {
+    e.preventDefault();
+ };
   return (
     <form onSubmit={formik.handleSubmit} className="myform row py-4 bg-white">
       <div className="header-form text-start mb-5">
@@ -95,18 +103,23 @@ useEffect(() => {
               }}
               label="Birthday"
               value={formik.values.birthDate}
+              disableFuture
+              onBlur={formik.handleBlur}
               onChange={(value) => {
                 console.log(value);
                 formik.setFieldValue("birthDate", value);
               }}
-              renderInput={(params) => <CustTextField {...params} />}
+              renderInput={(params) => <CustTextField  onKeyDown={onKeyDown}    onBlur={formik.handleBlur}{...params} /> }
             />
           </LocalizationProvider>
         </div>
-        {formik.touched.fullNamme && formik.errors.fullNamme ? (
-          <small className="text-danger">{formik.errors.fullNamme}</small>
-        ) : null}
+        {/* {formik.touched.birthDate  && formik.errors.birthDate ? (
+          <p className="text-danger">{formik.errors.birthDate}</p>
+        ) : null} */}
       </div>
+      {formik.touched.birthDate  && formik.errors.birthDate ? (
+          <p className="text-danger">{formik.errors.birthDate}</p>
+        ) : null}
 
       <div className="col-md-6 col-12">
         <FormControl fullWidth>

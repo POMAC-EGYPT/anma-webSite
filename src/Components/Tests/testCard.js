@@ -10,26 +10,34 @@ import { useNavigate, Link } from "react-router-dom";
 //components
 
 export default (props) => {
-  const navigate= useNavigate
+  const navigate = useNavigate;
   return (
     <div className="col-12 row card-parent">
       {props.tests.map((itemData) => {
-        console.log(itemData.id)
+        console.log(itemData.id);
         return (
-            <div key= {itemData.id} className="row  col-md-4  col-6 card">
-          <Button>
-            <div className="container">
+          <div
+            key={itemData.id}
+            className="row  col-md-4  col-6 card custom-col"
+          >
+            <Button>
+              <div className="container">
                 <label className="card-backGround">
-                <div className="cardContent-cont">
-                <span className="hoverTextCard">{itemData.name_en}</span>
-                <Link target="_blank"  to= {`/DoTest?test=${itemData.id}`}>
-                <Button  className="hoverButCard" onClick={() => navigate('/route here...')}>Take test</Button>
-                </Link>
-                </div>
+                  <div className="cardContent-cont">
+                    <span className="hoverTextCard">{itemData.name_en}</span>
+                    <Link target="_blank" to={`/DoTest?test=${itemData.id}`}>
+                      <Button
+                        className="hoverButCard"
+                        onClick={() => navigate("/route here...")}
+                      >
+                        Take test
+                      </Button>
+                    </Link>
+                  </div>
                 </label>
-              <img src={itemData.imagePath} />
-            </div>
-          </Button>
+                <img src={itemData.imagePath} />
+              </div>
+            </Button>
           </div>
         );
       })}

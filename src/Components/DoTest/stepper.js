@@ -25,7 +25,7 @@ const steps = [
 ];
 
 export default function HorizontalNonLinearStepper(props) {
-  console.log(props.testExam)
+  console.log(props)
   const [activeStep, setActiveStep] = React.useState(
     props.secView ? 1 : props.thirdView ? 2 : 0
   );
@@ -103,11 +103,11 @@ export default function HorizontalNonLinearStepper(props) {
   return (
     <div className="Stepper-parent">
       <div className="header-parent">
-        <div className="col-12 header-cont row">
-          <div className="col-3">
+        <div className="col-12 header-cont row py-4 px-0">
+          <div className="col-3 col-sm-2 me-4">
             <img src={props.userTest.imagePath} className="header-img" />
           </div>
-          <div className="col-9 text-start flex-column row justify-content-around">
+          <div className="col-8 col-sm-9 text-start flex-column row justify-content-around">
             <span className="header-bold">{props.userTest.name_en}</span>
             <span className="header-regular">
               {`Age from ${

@@ -43,14 +43,24 @@
   margin-right: 5px;
 }
 
+.cards-cont-parent {
+  pointer-events: none;
+}
+
+.cards-cont-parent:hover {
+margin-bottom: 90px !important;
+}
 
 .home-parent #card-container {
-  height: 60%;
-  /* width: 266px; */
+  pointer-events: auto;
+  height: 73%;
   width: 15%;
   display: inline-block;
   position: relative;
 
+}
+.cards-cont-parent > #card-container {
+  pointer-events: auto;
 }
 
 .home-parent .card1:hover {
@@ -80,7 +90,7 @@
 
 
 .home-parent .cont {
-  height: 177px;
+  /* height: 177px; */
   /* 4:3 aspect ratio */
 }
 
@@ -90,20 +100,29 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: silver
+  background-color: silver;
+  /* padding-bottom: 15px; */
     /* show me! */
 }
 
 .home-parent .card .card-text {
+  padding-left: 10px;
+  padding-right: 10px;
   overflow: hidden;
   font-size: 16px;
   font-family: 'GopherMedium';
   color: #000000;
+  display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
 .home-parent #card-container:hover .card-text {
   color: #FFFFFF !important;
+  -webkit-line-clamp: 400 !important;
 }
 
 
@@ -114,9 +133,8 @@
 }
 
 .home-parent .card img {
-  margin-top: 15px;
-  width: 25%;
-  margin-bottom: 15px;
+  margin: auto;
+  width: 100%;
 }
 
 .home-parent .custText::after {
@@ -208,7 +226,7 @@
   border-radius: 5px 100px 5px 5px;
   /* margin-bottom: 200px; */
   height: 200px;
-  min-height: 200px !important;
+  min-height: 200px ;
 }
 
 .home-parent .featureCard-index span {
@@ -285,16 +303,16 @@
   color: white !important;
 }
 
-.home-parent #card-container:hover {
-  height: 100% !important;
+.cards-cont-parent .card:hover  .target{
+  height: 1000px !important;
+  margin-bottom: 200px !important;
+  background-color: red !important;
 }
 
-.home-parent .featureCard-container {
-  overflow: hidden;
-}
 
 
-.home-parent .featureCard-container:hover {
+.home-parent .featureCard-container:hover,
+.home-parent .card:hover {
   height: max-content !important;
   overflow: unset !important;
 }
@@ -421,14 +439,15 @@
 }
 
 .home-parent .owl-carousel .owl-item img {
-  padding-left: 15px;
-    padding-right: 15px;
-    width: 220px;
+  /* padding-left: 15px;
+    padding-right: 15px; */
+    width: 91%;
     height: 250px;
     object-fit: cover;
-    border-bottom-right-radius: 23px;
+    border-radius: 25px;
   
 }
+
 
 .platform-line {
   position: relative;
@@ -476,9 +495,9 @@
 }
 
 .home-parent .imageLabel-cont{
+  width: 91%;
   position: relative;
   top: 41px;
-  padding-right: 15px !important;
 }
 
 .home-parent .imageLabel{
@@ -499,19 +518,26 @@
 }
 
 
+.home-parent .item button{
+  width: 100%;
+}
+.home-parent .slider-img-container{
+  width: 100%;
+}
 .home-parent .card-backGround {
-  border-bottom-left-radius: 15px;
-  height: 185px;
-  position: absolute;
-  bottom: 0;
-  left: 34px;
-  width: 192px;
-  background-image: linear-gradient(to top, rgba(11, 5, 5, 0.8), rgba(212, 196, 196, 0.026));
-  z-index: 2;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 25px;
+    height: 185px;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 87%;
+    background-image: linear-gradient(to top, rgba(11, 5, 5, 0.8), rgba(212, 196, 196, 0.026));
+    z-index: 2;
+    border-bottom-right-radius: 25px;
+    bottom: 5px;
 }
 
-.home-parent .container .img-name{
+.home-parent  .img-name{
   text-transform: lowercase !important;
     font-size: 18px;
     font-family: 'GopherBold';
@@ -519,12 +545,13 @@
     position: relative;
     top: 90px;
 }
-.home-parent .container button:hover {
+.home-parent .slider-img-container button:hover {
   display: block;
   background-color: #00A099 !important;
+
 }
 
-.home-parent .container button{
+.home-parent .slider-img-container button{
 text-transform: capitalize !important;
 display: none;
 font-family: 'GopherMedium';
@@ -532,20 +559,21 @@ color: white;
 font-size: 16px;
 background-color: #00A099;
 padding: 8px;
-width: 50%;
+width: 150px ;
 margin: auto;
 border-radius: 7px;
 }
 
-.home-parent .container:hover  .img-name {
-  font-size: 25px !important;
+.home-parent .slider-img-container:hover  .img-name {
+  font-size: 25px ;
   top: 0px !important;
   
 
 }
 
-.home-parent .container .img-name{
-  margin-left: 10px;
+.home-parent .slider-img-container .img-name{
+  /* margin-left: 10px; */
+  margin: auto;
   display: block;
   width: 195px;
   white-space: nowrap;
@@ -554,7 +582,11 @@ border-radius: 7px;
 
 }
 
-.home-parent .container:hover .img-name {
+.home-parent .slider-img-container .img-name:hover{
+  font-size: 12px !important;
+}
+
+.home-parent .slider-img-container:hover .img-name {
   display: block;
   margin-bottom: 40px;
 
@@ -575,3 +607,58 @@ border-radius: 7px;
 .home-parent .card-backGround a{
   text-decoration: unset !important;
 }
+
+.home-parent .test-style{
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.home-parent .test-style img{
+  position: relative;
+  z-index: 9;
+  transition: .3s ease-in-out;
+
+}
+
+ .card{
+  overflow-y: hidden !important;
+} 
+
+
+
+/* .card:hover .test-style img{
+  top: -54px;
+  left: -175px;
+} */
+/* .card:hover .test-style::before {
+  top: 54px;
+  left: 175px;
+  opacity: .3;
+} 
+
+
+.home-parent .test-style::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  padding: 15px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0;
+  z-index: 2;
+  transition: .3s ease-in-out;
+ 
+}  */
+
+ 

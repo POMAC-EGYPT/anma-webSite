@@ -19,3 +19,10 @@
         font-size: 12px;
     }
 }
+
+@media(max-width: 768px) {
+    .navBar-Parent .internetStatus .offline {
+        padding-left: 10px !important;
+        text-align: left !important;
+    }
+}

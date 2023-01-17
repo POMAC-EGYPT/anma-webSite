@@ -16,6 +16,7 @@
         font-size: 25px;
         padding-left: 10px;
     }
+    
 
     .tests-parent .card-parent .container:hover .hoverTextCard {
         font-size: 10px !important;
@@ -30,7 +31,7 @@
     }
 
     .tests-parent .card-parent {
-        margin-left: 20px !important;
+        margin-left: 5px !important;
     }
 
     .tests-parent .testType-header {
@@ -41,8 +42,31 @@
     }
 }
 
-@media (max-width:500px) {
-    .tests-parent .card-parent .container .card-backGround {
-        width: 85% !important;
+
+
+.tests-parent .card-parent .custom-col{
+    margin-right: 0px !important;
+    width: 20% !important;
+    padding-left: 0px !important;
+    padding-right: 10px;
+    margin-left: 0px !important;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.tests-parent .card-parent .custom-col{
+    width: 25% !important;
+}
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .tests-parent .card-parent .custom-col{
+        width: 33.3333% !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .tests-parent .card-parent .custom-col{
+        width: 50% !important;
     }
 }

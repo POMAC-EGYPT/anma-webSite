@@ -2,6 +2,10 @@
     font-family: 'MyWebFont';
     src: url('../../css/Gopher-Medium.ttf');
 }
+@font-face {
+    font-family: 'GopherRegular';
+    src: url('../../css/Gopher-Regular.ttf');
+  }
 
 .navBar-Parent header {
     background-color: #353B50 !important;
@@ -92,7 +96,8 @@
     text-align: start;
     padding-left: 30px;
     padding-right: 30px;
-    height: 15px;
+    overflow: hidden;
+    max-height: 149px;
 }
 
 .navBar-Parent .dropDown-parent .dropDown-cont .typeTest-cont::after {
@@ -107,6 +112,9 @@
     font-family: 'GopherBold';
 }
 
+.navBar-Parent .dropDown-parent .dropDown-cont .testName:hover{
+    color: #00A099 !important;
+}
 .navBar-Parent .dropDown-parent .dropDown-cont .testName {
     padding-left: 5px !important;
     text-transform: lowercase;
@@ -137,4 +145,24 @@
 
 .navBar-Parent .dropDown-parent .Grid {
     background-color: white !important;
+}
+
+.navBar-Parent .internetStatus{
+    background-color: #FB5252 !important;
+}
+
+.navBar-Parent .internetStatus .offline{
+    margin-top: auto;
+    margin-bottom: 0px !important;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: 'GopherRegular';
+    margin-bottom: auto !important;
+    padding-left: 20px;
+}
+
+.navBar-Parent .internetStatus-cont{
+    width: 92%;
+    margin: auto;
+    display: flex;
 }

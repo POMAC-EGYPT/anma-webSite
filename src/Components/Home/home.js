@@ -133,7 +133,7 @@ export default (props) => {
               <div key={data.id} class="item">
 
                 <Button>
-                <div className="container">
+                <div className="slider-img-container">
                   <div className= "imageLabel-cont">
                 <span className="imageLabel">{`${data.type.age_from} - ${data.type.age_to} years`}</span>
                 </div>
@@ -184,8 +184,8 @@ export default (props) => {
                       className={`card card${index + 1}`}
                       style={{ background: data.color }}
                     >
-                      <div className="">
-                        <img src={data.svgFiles} className="rounded-circle" />
+                      <div className="test-style">
+                        <img src={data.svgFiles} className="" />
                       </div>
 
                       <span className="card-text">{data.text}</span>
@@ -199,7 +199,7 @@ export default (props) => {
 
         {/*about anma*/}
 
-        <div className="d-flex flex-md-row flex-column ">
+        <div className="d-flex flex-md-row flex-column target">
           <div className="col-md-5 row px-0">
             <img className="aboutImg ms-auto row mt-2" src={AboutAnma} />
           </div>
